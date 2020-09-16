@@ -1,10 +1,10 @@
 class CreateTeas < ActiveRecord::Migration[6.0]
   def change
     create_table :teas do |t|
-      t.string :title
+      t.string :name
       t.string :type
       t.string :flavor
-      t.string :bought_from
+      t.string :store
       
       t.timestamps
     end

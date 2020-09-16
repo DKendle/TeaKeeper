@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_09_16_122356) do
 
   create_table "recipes", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.string "ingredients"
     t.string "instructions"
     t.integer "difficulty"
@@ -24,16 +24,16 @@ ActiveRecord::Schema.define(version: 2020_09_16_122356) do
   end
 
   create_table "teas", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.string "type"
     t.string "flavor"
-    t.string "bought_from"
+    t.string "store"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
