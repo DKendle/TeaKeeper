@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-    def authentication
+    def auth_required
         #####change path after sessions controller is 
         if !logged_in?
             redirect_to '/login'
@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     end
 
     def logged_in?
-        session[:username]
+        session[:user_id]
     end
 
 end
