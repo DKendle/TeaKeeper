@@ -12,11 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2020_09_16_122356) do
 
-  create_table "recipes", force: :cascade do |t|
-    t.string "name"
-    t.string "ingredients"
-    t.string "instructions"
-    t.integer "difficulty"
+  create_table "reviews", force: :cascade do |t|
+    t.string "fav_way_to_drink"
     t.integer "user_id"
     t.integer "tea_id"
     t.datetime "created_at", precision: 6, null: false

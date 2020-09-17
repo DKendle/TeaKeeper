@@ -1,0 +1,14 @@
+<h1>Fill Out the Form below to Create a New Tea:</h1>
+
+<%= form_for @tea do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<hr>
+<%= f.fields_for :reviews do |review| %>
+<%= review.label  "Favorite Way to Drink this Tea"%><br>
+<%= review.text_field :fav_way_to_drink%>
+
+<% end %>
+
+<%= f.submit %>
+<% end %>
